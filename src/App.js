@@ -1,20 +1,19 @@
 import React from 'react';
 import './App.css';
-import { HashRouter, Route} from 'react-router-dom';
-import Home from './Components/Home.js'
-import Teachlogin from './Components/TeachLogin';
-import Stulogin from './Components/StuLogin'
+import Application from "./Components/Application";
+import UserProvider from "./providers/UserProvider";
 
-function App() {
-  return (
-    <div>
-      <HashRouter basename='/'>
-        <Route path='/' exact component={Home}/>
-        <Route path='/teachlogin' exact component={Teachlogin}/>
-        <Route path='/stulogin' exact component={Stulogin}/>
-      </HashRouter>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      <div>
+        <UserProvider>
+          <Application />
+        </UserProvider>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
