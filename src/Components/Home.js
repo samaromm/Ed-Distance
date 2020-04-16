@@ -2,7 +2,7 @@ import React from 'react';
 import teacher from '../images/teacher.svg'
 import logo from '../images/logo.png'
 import { MDBRow, MDBContainer, MDBBtn} from 'mdbreact';
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 
 
 const Home =props=>{
@@ -22,10 +22,10 @@ const Home =props=>{
                 </MDBRow>
                 <MDBRow className="d-flex justify-content-center my-4 pinkText ">
                     <Link to="/stulogin">
-                        <MDBBtn color="pink" onClick={this.handleSubmit} name="Student">Student login</MDBBtn>
+                        <MDBBtn color="pink" name="Student">Student login</MDBBtn>
                     </Link >
                     <Link to="/teachlogin">
-                        <MDBBtn color="pink" name="Teacher" onClick={this.handleSubmit} >Teacher login</MDBBtn>
+                        <MDBBtn color="pink" name="Teacher" >Teacher login</MDBBtn>
                     </Link>
                 </MDBRow>
             </MDBContainer>

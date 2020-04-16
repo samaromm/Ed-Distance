@@ -6,6 +6,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+require('dotenv').config();
 
 ReactDOM.render(
   <React.StrictMode>

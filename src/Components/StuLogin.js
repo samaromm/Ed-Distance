@@ -1,26 +1,32 @@
-import React, {useState} from 'react';
 import { MDBRow, MDBContainer, MDBCol,MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
+import React, { useCallback, useContext } from "react";
+import { withRouter, Redirect } from "react-router";
+import app from "../base.js";
+import { AuthContext } from "../Auth.js";
 
-const StuLogin=()=>{
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const signInWithEmailAndPasswordHandler = 
-            (event,email, password) => {
-                event.preventDefault();
-    };
 
-    const onChangeHandler = (event) => {
-        const {name, value} = event.currentTarget;
+const StuLogin=({ history })=>{
+    const handleLogin = useCallback(
+        async event => {
+          event.preventDefault();
+          const { email, password } = event.target.elements;
+          try {
+            await app
+              .auth()
+              .signInWithEmailAndPassword(email.value, password.value);
+            history.push("/student");
+          } catch (error) {
+            alert(error);
+          }
+        },
+        [history]
+    );
 
-        if(name === 'userEmail') {
-            setEmail(value);
-        }
-        else if(name === 'userPassword'){
-          setPassword(value);
-        }
-    };
-
+    const { currentUser } = useContext(AuthContext);
+    if (currentUser) {
+        return <Redirect to="/student" />;
+    }
+    
     return(
         <MDBContainer>
             <MDBRow className="d-flex justify-content-center pt-5">
@@ -28,18 +34,14 @@ const StuLogin=()=>{
                     <MDBCard>
                         <MDBCardBody >  
                             <p className="h5 text-center mb-4" style={{color:"#E91E63"}}>Student login</p>
-                            {error !== null && <div className = "py-4 bg-red-600 w-full text-white text-center mb-3">{error}</div>}
-                            <form>
+                            <form onSubmit={handleLogin}>
                                 <div className="pink-text">
                                     <MDBInput label="Student Email" icon="envelope" group type="email" validate error="wrong"
-                                    success="right" htmlFor="userEmail" name="userEmail" value = {email} id="userEmail"
-                                    onChange = {(event) => onChangeHandler(event)}/>
-                                    <MDBInput label="Password" htmlFor="userPassword" icon="lock" group type="password" 
-                                    name="userPassword"  id="userPassword" onChange = {(event) => onChangeHandler(event)}
-                                    value = {password} validate />
+                                    success="right" name="email"/>
+                                    <MDBInput label="Password" icon="lock" group type="password" name="password"/>
                                 </div>
                                 <div className="text-center">
-                                    <MDBBtn color="pink" onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}}>
+                                    <MDBBtn color="pink" type="submit">
                                         Login
                                     </MDBBtn>
                                 </div>
@@ -51,4 +53,4 @@ const StuLogin=()=>{
         </MDBContainer>
     )
 }
-export default StuLogin;
+export default withRouter(StuLogin);
