@@ -1,11 +1,11 @@
 import React from "react";
-import app from "../base.js";
+import Header from './Header'
 
 const StuProfile = () => {
   return (
     <div>
-      <h1>Hi Student</h1>
-      <button onClick={() => app.auth().signOut()}>Sign out</button>
+      <Header home="/student"/>
+      
     </div>
   ) 
 };

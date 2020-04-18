@@ -8,10 +8,21 @@ import StuProfile from './Components/StuProfile';
 import TeachProfile from './Components/TeachProfile';
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
+import firebase from './base'
 
 
-class App extends React.Component {
-  render(){
+function App () {
+
+  React.useEffect(()=>{
+      firebase.firestore().collection("university").onSnapshot(snapshots=>{
+        const allDocs ={}
+        snapshots.docs.map(doc=>{
+          return allDocs[doc.id]={...doc.data()}
+        })
+        console.log(allDocs)
+      })
+  },[])
+
     return (
       <AuthProvider>
         <Router basename='/'>
@@ -25,8 +36,6 @@ class App extends React.Component {
         </Router>
       </AuthProvider>
     );
-  }
-  
 }
 
 export default App;

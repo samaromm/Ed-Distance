@@ -1,13 +1,17 @@
-import * as firebase from "firebase/app";
+import firebase from 'firebase'
 import "firebase/auth";
 
-const app = firebase.initializeApp({
-    apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
-    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID
-});
-export default app;
+const firebaseConfig = {
+    apiKey: "AIzaSyABWSfRT9Hvvs9IQ-XJ558nbObQetGj668",
+    authDomain: "ed-distance.firebaseapp.com",
+    databaseURL: "https://ed-distance.firebaseio.com",
+    projectId: "ed-distance",
+    storageBucket: "ed-distance.appspot.com",
+    messagingSenderId: "1038316067044",
+    appId: "1:1038316067044:web:f664c176a2b1ee047df4f1",
+    measurementId: "G-R78MQL33LR"
+  };
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+export default firebase;
   
