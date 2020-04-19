@@ -8,6 +8,7 @@ import StuProfile from './Components/StuProfile';
 import TeachProfile from './Components/TeachProfile';
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
+import Se302 from './Components/se302'
 
 
 function App () {
@@ -21,6 +22,7 @@ function App () {
             <Route path='/stulogin' exact component={Stulogin}/>
             <PrivateRoute path='/student' exact component={StuProfile}/>
             <PrivateRoute path='/teacher' exact component={TeachProfile}/>
+            <Route path='/student/courses/se302' exact component={Se302}/>
           </div>
         </Router>
       </AuthProvider>

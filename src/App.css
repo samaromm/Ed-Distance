@@ -5,6 +5,14 @@
 .pinkColor{
   background-color: #FF63C0;
 }
+
+.navLink{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
 .submitBtn {
   background-color: #FF63C0;
   border-radius: 5px;
