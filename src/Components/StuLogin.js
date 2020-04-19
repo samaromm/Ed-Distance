@@ -1,9 +1,9 @@
 import { MDBRow, MDBContainer, MDBCol,MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
-import React, { useCallback, useContext } from "react";
+import React, { useCallback, useContext} from "react";
 import { withRouter, Redirect } from "react-router";
 import app from "../base.js";
 import { AuthContext } from "../Auth.js";
-
+import { Link } from 'react-router-dom';
 
 const StuLogin=({ history })=>{
     const handleLogin = useCallback(
@@ -29,9 +29,9 @@ const StuLogin=({ history })=>{
     
     return(
         <MDBContainer>
-            <MDBRow className="d-flex justify-content-center pt-5">
-                <MDBCol md="6">
-                    <MDBCard>
+            <MDBRow className="d-flex justify-content-center mt-5">
+                <MDBCol md="6" className="mt-5">
+                    <MDBCard className="p-5">
                         <MDBCardBody >  
                             <p className="h5 text-center mb-4" style={{color:"#E91E63"}}>Student login</p>
                             <form onSubmit={handleLogin}>
@@ -41,7 +41,12 @@ const StuLogin=({ history })=>{
                                     <MDBInput label="Password" icon="lock" group type="password" name="password"/>
                                 </div>
                                 <div className="text-center">
-                                    <MDBBtn color="pink" type="submit">
+                                    <Link to="/">
+                                        <MDBBtn color="pink" className="submitBtn" >
+                                            Return
+                                        </MDBBtn>
+                                    </Link>  
+                                    <MDBBtn color="pink" type="submit" className="submitBtn" >
                                         Login
                                     </MDBBtn>
                                 </div>

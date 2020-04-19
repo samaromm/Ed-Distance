@@ -12,7 +12,7 @@ const Home =props=>{
                     <img src={teacher} alt="teacher" width="500px" />                    
                 </MDBRow>
                 <MDBRow className="d-flex justify-content-center mt-5 ">
-                    <img src={logo} alt="teacher" width="70px" />                    
+                    <img src={logo} alt="logo" width="70px" />                    
                 </MDBRow>
                 <MDBRow className="d-flex justify-content-center pinkText">
                     <h1>Welcome to Ed-Distance</h1>
@@ -20,12 +20,12 @@ const Home =props=>{
                 <MDBRow className="d-flex justify-content-center pinkText ">
                     <h3><i>Where education is posssible despite the distance</i></h3>
                 </MDBRow>
-                <MDBRow className="d-flex justify-content-center my-4 pinkText ">
+                <MDBRow className="d-flex justify-content-center my-3 pinkText ">
                     <Link to="/stulogin">
-                        <MDBBtn color="pink" name="Student">Student login</MDBBtn>
+                        <MDBBtn className="submitBtn" color="pink" name="Student">Student login</MDBBtn>
                     </Link >
                     <Link to="/teachlogin">
-                        <MDBBtn color="pink" name="Teacher" >Teacher login</MDBBtn>
+                        <MDBBtn className="submitBtn" color="pink" name="Teacher" >Teacher login</MDBBtn>
                     </Link>
                 </MDBRow>
             </MDBContainer>

@@ -8,20 +8,9 @@ import StuProfile from './Components/StuProfile';
 import TeachProfile from './Components/TeachProfile';
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
-import firebase from './base'
 
 
 function App () {
-
-  React.useEffect(()=>{
-      firebase.firestore().collection("university").onSnapshot(snapshots=>{
-        const allDocs ={}
-        snapshots.docs.map(doc=>{
-          return allDocs[doc.id]={...doc.data()}
-        })
-        console.log(allDocs)
-      })
-  },[])
 
     return (
       <AuthProvider>
