@@ -55,7 +55,7 @@ class Header extends React.Component{
                 <MDBNavbarToggler onClick={this.toggleCollapse} />
                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
                   <MDBNavbarNav left>
-                    <MDBNavItem active>
+                    <MDBNavItem >
                       <MDBNavLink to={this.props.home}>Home</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem>
@@ -63,6 +63,9 @@ class Header extends React.Component{
                     </MDBNavItem>
                     <MDBNavItem>
                       <MDBNavLink to="#!">Favorites</MDBNavLink>
+                    </MDBNavItem>
+                    <MDBNavItem>
+                      <MDBNavLink to="#!">Discussion room</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem>
                       <MDBDropdown>

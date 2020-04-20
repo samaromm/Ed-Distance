@@ -13,6 +13,16 @@
   margin-right: 10px;
 }
 
+.iconBtn{
+  padding: 0;
+  margin-bottom: 30px;
+  box-shadow: none;
+}
+
+.iconBtn:hover{
+  box-shadow: none;
+}
+
 .submitBtn {
   background-color: #FF63C0;
   border-radius: 5px;
