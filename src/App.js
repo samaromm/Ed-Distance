@@ -9,7 +9,9 @@ import TeachProfile from './Components/TeachProfile';
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
 import Se302 from './Components/se302'
-
+import Messages from './Components/Messages'
+import Contact from './Components/Contact'
+import Favorites from './Components/favorites'
 
 function App () {
 
@@ -23,6 +25,9 @@ function App () {
             <PrivateRoute path='/student' exact component={StuProfile}/>
             <PrivateRoute path='/teacher' exact component={TeachProfile}/>
             <Route path='/student/courses/se302' exact component={Se302}/>
+            <Route path='/student/messages' exact component={Messages}/>
+            <Route path='/student/messages/new' exact component={Contact}/>
+            <Route path='/student/favorites' exact component={Favorites}/>
           </div>
         </Router>
       </AuthProvider>
