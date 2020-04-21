@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon} from "mdbreact";
+import pic from '../images/j.png'
 
 class Card extends React.Component{
 
@@ -66,7 +67,7 @@ class Card extends React.Component{
                 <MDBCol lg="4" md="12" className="mb-lg-0 mb-4 ">
                     <MDBCard testimonial>
                         <img
-                        src={this.props.info.img}
+                        src={pic}
                         alt=""
                         className="rounded-circle img-fluid mx-auto py-4" width="200px"
                         />

@@ -12,6 +12,7 @@ import Se302 from './Components/se302'
 import Messages from './Components/Messages'
 import Contact from './Components/Contact'
 import Favorites from './Components/favorites'
+import Room from './Components/room'
 
 function App () {
 
@@ -28,6 +29,11 @@ function App () {
             <Route path='/student/messages' exact component={Messages}/>
             <Route path='/student/messages/new' exact component={Contact}/>
             <Route path='/student/favorites' exact component={Favorites}/>
+            <Route path='/student/discussion' exact component={Room}/>
+            <Route path='/teacher/messages' exact component={Messages}/>
+            <Route path='/teacher/messages/new' exact component={Contact}/>
+            <Route path='/teacher/favorites' exact component={Favorites}/>
+            <Route path='/teacher/discussion' exact component={Room}/>
           </div>
         </Router>
       </AuthProvider>
