@@ -1,6 +1,6 @@
 import React from 'react';
 import teacher from '../images/teacher.svg'
-import logo from '../images/logo.png'
+import logo from '../images/laptop.svg'
 import { MDBRow, MDBContainer, MDBBtn} from 'mdbreact';
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const Home =props=>{
                     <img src={teacher} alt="teacher" width="500px" />                    
                 </MDBRow>
                 <MDBRow className="d-flex justify-content-center mt-5 ">
-                    <img src={logo} alt="logo" width="70px" />                    
+                    <img src={logo} alt="logo" width="10%" />                    
                 </MDBRow>
                 <MDBRow className="d-flex justify-content-center pinkText">
                     <h1>Welcome to Ed-Distance</h1>

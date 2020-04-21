@@ -5,6 +5,7 @@ import {
     } from "mdbreact";
 import { BrowserRouter as Router} from 'react-router-dom';
 import app from "../base";
+import logo from "../images/laptop.svg"
 
 class Header extends React.Component{
 
@@ -49,23 +50,21 @@ class Header extends React.Component{
           return(
             <Router>
               <MDBNavbar className="pinkColor" dark expand="md">
-                <MDBNavbarBrand>
-                    <strong className="white-text mr-3">EDISTANCE</strong>
-                </MDBNavbarBrand>
+                  <img src={logo} alt="logo" className="mr-3" width="7%" />
                 <MDBNavbarToggler onClick={this.toggleCollapse} />
                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
                   <MDBNavbarNav left>
                     <MDBNavItem >
-                      <MDBNavLink to={this.props.home}>Home</MDBNavLink>
+                      <a className="forLinks" href={this.props.home}>Home</a>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <MDBNavLink to="/student/messages">Messages</MDBNavLink>
+                      <a className="forLinks" href="/student/messages">Messages</a>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <MDBNavLink to="/student/favorites">Favorites</MDBNavLink>
+                      <a className="forLinks" href="/student/favorites">Favorites</a>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <MDBNavLink to="#!">Discussion room</MDBNavLink>
+                      <a className="forLastLink" href="#!">Discussion room</a>
                     </MDBNavItem>
                     <MDBNavItem>
                       <MDBDropdown>

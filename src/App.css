@@ -26,6 +26,21 @@
   cursor: pointer;
 }
 
+.forLinks{
+  color:white;
+  margin-right: 15px;
+  display: flex;
+  padding-top: 7px;
+  
+}
+
+.forLastLink{
+  color:white;
+  display: flex;
+  padding-top: 7px;
+  margin-right: 6px;
+}
+
 .submitBtn {
   background-color: #FF63C0;
   border-radius: 5px;
