@@ -3,10 +3,14 @@ import {  MDBRow,  MDBCard, MDBCardBody, MDBContainer, MDBCol, MDBBtn, MDBIcon} 
 import Header from './Header'
 import { Link } from "react-router-dom";
 
-const Messages = () => {
+
+
+const Messages = (props) => {
+    let home=""
+    props.location.pathname=="/teacher/messages"? home="teacher":home="student"
   return (
     <div>
-        <Header home="/student"/>
+        <Header home={home}/>
         <MDBContainer > 
             <MDBRow className="pt-5 pinkText mb-3">
                 <MDBCol className="d-flex text-center justify-content-center">
@@ -98,7 +102,7 @@ const Messages = () => {
                                 </div>
                             </MDBRow>
                             <MDBRow>
-                                <Link to="/student/messages/new">
+                                <Link to={`/${home}/messages/new`}>
                                 <MDBBtn color="pink" className="mb-4">
                                     New Message
                                 </MDBBtn>

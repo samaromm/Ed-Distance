@@ -13,6 +13,8 @@ import Messages from './Components/Messages'
 import Contact from './Components/Contact'
 import Favorites from './Components/favorites'
 import Room from './Components/room'
+import Online from './Components/classes'
+import ClassVideo from './Components/videoClass'
 
 function App () {
 
@@ -29,11 +31,14 @@ function App () {
             <Route path='/student/messages' exact component={Messages}/>
             <Route path='/student/messages/new' exact component={Contact}/>
             <Route path='/student/favorites' exact component={Favorites}/>
+            <Route path='/student/onlineclasses' exact component={Online}/>
             <Route path='/student/discussion' exact component={Room}/>
             <Route path='/teacher/messages' exact component={Messages}/>
             <Route path='/teacher/messages/new' exact component={Contact}/>
             <Route path='/teacher/favorites' exact component={Favorites}/>
             <Route path='/teacher/discussion' exact component={Room}/>
+            <Route path='/student/class' exact component={ClassVideo}/>
+            <Route path='/teacher/class' exact component={ClassVideo}/>
           </div>
         </Router>
       </AuthProvider>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBBtn, MDBNavLink
+    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBBtn, MDBNavLink, MDBBadge
     } from "mdbreact";
 import { BrowserRouter as Router, withRouter} from 'react-router-dom';
 import app from "../base";
@@ -13,7 +13,7 @@ class Header extends React.Component{
         super();
         this.state={
           stcourses:[],
-          tcourses:[]
+          tcourses:[],
         }
       }
 
@@ -24,7 +24,7 @@ class Header extends React.Component{
         else copy={...this.state.tcourses}
         let a=Object.keys(copy).map(element=>{
           return(
-            <MDBDropdownItem href={`${this.props.home}/courses/${copy[element]}`}>
+            <MDBDropdownItem href={`/${this.props.home}/courses/${copy[element]}`}>
                 {copy[element]}
             </MDBDropdownItem>
           )
@@ -54,17 +54,23 @@ class Header extends React.Component{
                 <MDBCollapse id="navbarCollapse3" navbar>
                   <MDBNavbarNav left>
                     <MDBNavItem >
-                      <a className="forLinks" href={this.props.home}>Home</a>
+                      <a className="forLinks" href={`/${this.props.home}`}>Home</a>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <a className="forLinks" href={`${this.props.home}/messages`}>Messages</a>
+                      <a className="forLinks" href={`/${this.props.home}/messages`}>Messages
+                      <MDBBadge pill color="danger" className="ml-1 mb-3">9</MDBBadge>
+                     </a>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <a className="forLinks" href={`${this.props.home}/favorites`}>Favorites</a>
+                      <a className="forLinks" href={`/${this.props.home}/favorites`}>Favorites</a>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <a className="forLastLink" href={`${this.props.home}/discussion`}>Discussion room</a>
+                      <a className="forLinks" href={`/${this.props.home}/onlineclasses`}>Classes</a>
                     </MDBNavItem>
+                    <MDBNavItem>
+                      <a className="forLastLink" href={`/${this.props.home}/discussion`}>Discussion room</a>
+                    </MDBNavItem>
+                    
                     <MDBNavItem>
                       <MDBDropdown>
                         <MDBDropdownToggle nav caret>

@@ -2,11 +2,13 @@ import React from 'react'
 import Header from './Header'
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBBtn, MDBInput, MDBContainer } from "mdbreact";
 
-const Contact =()=>{
+const Contact =(props)=>{
     const scrollContainerStyle = { maxHeight: "380px" };
+    let home=""
+    props.location.pathname=="/teacher/messages/new"? home="teacher":home="student"
     return(
         <div>
-            <Header home="/student"/>
+            <Header home={home} />
                 <section className="my-5">
                 <h5 className="h3-responsive font-weight-bold text-center my-5 pinkText">
                     Send a message

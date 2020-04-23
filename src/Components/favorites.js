@@ -3,10 +3,12 @@ import Header from './Header'
 import { MDBContainer, MDBIcon, MDBRow, MDBCol } from 'mdbreact'
 import Girl from '../images/likes.svg'
 
-const Favorites =()=>{
+const Favorites =(props)=>{
+    let home=""
+    props.location.pathname=="/teacher/favorites"? home="teacher":home="student"
     return(
         <div>
-             <Header home="/student"/>
+             <Header home={home}/>
              <MDBContainer > 
                 <MDBRow className="pt-5 pinkText mb-3">
                     <MDBCol className="d-flex text-center justify-content-center">

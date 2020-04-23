@@ -28,9 +28,11 @@ class Room extends React.Component{
 
     render(){
     const scrollContainerStyle = { maxHeight: "460px" };
+    let home=""
+    this.props.location.pathname=="/teacher/discussion"? home="teacher":home="student"
     return(
         <div>
-            <Header home="/student"/>
+            <Header home={home}/>
             <MDBContainer > 
                 <MDBRow className="pt-5 pinkText mb-3">
                     <MDBCol className="d-flex text-center justify-content-center">

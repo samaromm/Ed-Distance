@@ -3,6 +3,8 @@ import app from "../base.js";
 import Header from './Header'
 import Welcome from '../images/welcome.svg'
 import Card from './teachers/card'
+import Video from './teachers/video'
+import { MDBCol } from "mdbreact";
 
 class TeachProfile extends React.Component{
 
@@ -12,9 +14,8 @@ class TeachProfile extends React.Component{
       <div>
         <Header home="teacher" />
         <div className="justify-content-center d-flex">
-            <img src={Welcome} alt="welcome " className="mx-auto pt-4" width="15%"/>
         </div>
-        <Card/>
+            <Card/>
       </div>
     ) 
   }

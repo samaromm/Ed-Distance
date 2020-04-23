@@ -118,9 +118,11 @@ class se302 extends React.Component{
 
     render(){
         const scrollContainerStyle = { maxHeight: "360px" };
+        let home=""
+    this.props.location.pathname=="/teacher/courses/se302"? home="teacher":home="student"
         return(
             <div>
-                <Header home="/student"/>
+                <Header home={home}/>
                     <MDBContainer fluid> 
                         <MDBRow className="pt-5 pinkText mb-3">
                             <MDBCol className="d-flex text-center justify-content-center">
