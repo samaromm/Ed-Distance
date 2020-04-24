@@ -28,7 +28,7 @@ export default class ModalBody extends Component{
                         <DateTimePicker />
                         </div>
                         <div className="text-center">
-                            <MDBBtn color="pink">Create</MDBBtn>
+                            <MDBBtn color="pink" className="text-white submitBtn">Create</MDBBtn>
                         </div>
                         </MDBCardBody>
                     </MDBCard>

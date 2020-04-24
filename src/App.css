@@ -11,11 +11,20 @@
   font-weight: bold;
   font-size: 20px;
   margin-right: 10px;
+  text-decoration: none;
 }
 
 
 .whiteIcon{
   color:gray
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.whiteText{
+  color:white;
 }
 
 .redIcon{

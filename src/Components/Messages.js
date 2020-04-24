@@ -103,7 +103,7 @@ const Messages = (props) => {
                             </MDBRow>
                             <MDBRow>
                                 <Link to={`/${home}/messages/new`}>
-                                <MDBBtn color="pink" className="mb-4">
+                                <MDBBtn color="pink" className="mb-4 text-white submitBtn">
                                     New Message
                                 </MDBBtn>
                                 </Link>

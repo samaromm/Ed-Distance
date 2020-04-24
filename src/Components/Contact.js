@@ -46,7 +46,7 @@ const Contact =(props)=>{
                             />
                         </div>
                         <div className="text-center">
-                            <MDBBtn color="pink">Send</MDBBtn>
+                            <MDBBtn color="pink" className="text-white">Send</MDBBtn>
                         </div>
                         </MDBCardBody>
                     </MDBCard>

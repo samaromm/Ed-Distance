@@ -4,9 +4,31 @@ import Card from './classcom2'
 import Two from './classcom'
 import { MDBRow, MDBCol, MDBCard,MDBCardBody, MDBIcon, MDBBtn   } from 'mdbreact'
 import image from '../../images/s.svg'
+import Modal from './buttonModel'
 
 export default class classes extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            modal: false,
+            modal2:false
+        }
+    }
+
+    close=()=>{
+        this.setState({
+            modal:!this.state.modal,
+            id:""
+        })
+    }
+
+    open = (event) => {
+        this.setState({
+          modal: !this.state.modal,
+        });
+    }
     render(){
+        
         return(
             <div>
             <Header home='teacher' />
@@ -26,7 +48,7 @@ export default class classes extends React.Component{
                     </MDBRow>
                     <MDBCard testimonial className=" py-4">
                         <h4 className="font-weight-bold text-center pinkText">Your upcoming classes
-                        <MDBBtn color="pink" className="px-1 py-0" onClick={this.open}> <MDBIcon icon="plus" /></MDBBtn>
+                        <MDBBtn color="pink" className="px-1 py-0 text-white" onClick={this.open}> <MDBIcon icon="plus" /></MDBBtn>
                         </h4>
                         <hr/>
                     <MDBCardBody className="scrollbar text-center">
@@ -40,6 +62,7 @@ export default class classes extends React.Component{
                     </MDBCardBody>
                     </MDBCard>
                 </MDBCol>
+                <Modal modal={this.state.modal} close={this.close}/>
             </MDBRow>
           </div> 
         )

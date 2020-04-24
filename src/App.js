@@ -16,6 +16,7 @@ import Room from './Components/room'
 import Online from './Components/classes'
 import ClassVideo from './Components/videoClass'
 import TeacherOnline from './Components/teachers/class'
+import Se302T from './Components/se302t'
 
 function App () {
 
@@ -29,6 +30,7 @@ function App () {
             <PrivateRoute path='/student' exact component={StuProfile}/>
             <PrivateRoute path='/teacher' exact component={TeachProfile}/>
             <Route path='/student/courses/se302' exact component={Se302}/>
+            <Route path='/teacher/courses/se302' exact component={Se302T}/>
             <Route path='/student/messages' exact component={Messages}/>
             <Route path='/student/messages/new' exact component={Contact}/>
             <Route path='/student/favorites' exact component={Favorites}/>

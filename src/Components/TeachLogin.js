@@ -42,11 +42,11 @@ const TeachLogin=({ history })=>{
                                 </div>
                                 <div className="text-center">
                                     <Link to="/">
-                                        <MDBBtn color="pink" className="submitBtn" >
+                                        <MDBBtn color="pink" className="submitBtn text-white" >
                                             Return
                                         </MDBBtn>
                                     </Link>  
-                                    <MDBBtn color="pink" type="submit" className="submitBtn" >
+                                    <MDBBtn color="pink" type="submit" className="submitBtn text-white" >
                                         Login
                                     </MDBBtn>
                                 </div>

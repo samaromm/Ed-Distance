@@ -37,7 +37,7 @@ export default class ModalBody extends Component{
                             <p style={{color:"red"}}>Notice that by choosing this option people can't see your room or join it unless you invite them directly</p>
                         </div>
                         <div className="text-center">
-                            <MDBBtn color="pink">Create</MDBBtn>
+                            <MDBBtn color="pink" className="text-white submitBtn">Create</MDBBtn>
                         </div>
                         </MDBCardBody>
                     </MDBCard>

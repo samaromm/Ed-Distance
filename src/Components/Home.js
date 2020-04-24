@@ -22,10 +22,10 @@ const Home =props=>{
                 </MDBRow>
                 <MDBRow className="d-flex justify-content-center my-3 pinkText ">
                     <Link to="/stulogin">
-                        <MDBBtn className="submitBtn" color="pink" name="Student">Student login</MDBBtn>
+                        <MDBBtn className="submitBtn text-white" color="pink" name="Student">Student login</MDBBtn>
                     </Link >
                     <Link to="/teachlogin">
-                        <MDBBtn className="submitBtn" color="pink" name="Teacher" >Teacher login</MDBBtn>
+                        <MDBBtn className="submitBtn text-white" color="pink" name="Teacher" >Teacher login</MDBBtn>
                     </Link>
                 </MDBRow>
             </MDBContainer>

@@ -73,7 +73,7 @@ class Card extends React.Component{
                     </MDBRow>
                     <MDBCard testimonial className=" py-4">
                         <h4 className="font-weight-bold text-center">Your upcoming classes
-                        <MDBBtn color="pink" className="px-1 py-0" onClick={this.open}> <MDBIcon icon="plus" /></MDBBtn>
+                        <MDBBtn color="pink" className="px-1 py-0 text-white" onClick={this.open}> <MDBIcon icon="plus" /></MDBBtn>
                         </h4>
                         <hr/>
                     <MDBCardBody className="scrollbar text-center" style={scrollContainerStyle2}>
@@ -88,7 +88,7 @@ class Card extends React.Component{
                 <MDBCol lg="4" md="12" className="mb-lg-0 mb-4 ">
                     <MDBCard testimonial className="py-3 mb-4">
                     <h4 className="font-weight-bold text-center">Your Announcements
-                        <MDBBtn color="pink" className="px-1 py-0" onClick={this.open2}> <MDBIcon icon="plus" /></MDBBtn>
+                        <MDBBtn color="pink" className="px-1 py-0 text-white" onClick={this.open2}> <MDBIcon icon="plus" /></MDBBtn>
                         </h4>
                         <hr/>
                     <MDBCardBody className="scrollbar " style={scrollContainerStyle2}>
@@ -101,7 +101,7 @@ class Card extends React.Component{
                     </MDBCard>
                     <MDBCard testimonial>
                         <h4 className="font-weight-bold text-center py-3">Your Documents
-                        <MDBBtn color="pink" className="px-1 py-0" onClick={this.open2}> <MDBIcon icon="plus" /></MDBBtn>
+                        <MDBBtn color="pink" className="px-1 py-0 text-white" onClick={this.open2}> <MDBIcon icon="plus" /></MDBBtn>
                         </h4>
                         <hr/>
                     <MDBCardBody className="scrollbar " style={scrollContainerStyle2}>

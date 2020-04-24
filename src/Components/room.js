@@ -36,7 +36,7 @@ class Room extends React.Component{
             <MDBContainer > 
                 <MDBRow className="pt-5 pinkText mb-3">
                     <MDBCol className="d-flex text-center justify-content-center">
-                    <MDBBtn color="pink" className="mb-4" onClick={this.open}>Start a new Discussion</MDBBtn>
+                    <MDBBtn color="pink" className="mb-4 text-white submitBtn" onClick={this.open}>Start a new Discussion</MDBBtn>
                     </MDBCol>  
                 </MDBRow>
                 <MDBRow>
