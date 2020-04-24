@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBContainer, MDBBtn} from 'mdbreact'
 import firebase from '../base'
-import Grades from './gradestable'
+import Grades from './teachers/studentgardes'
 import Modal from './Modal'
 
 class se302 extends React.Component{
@@ -197,7 +197,7 @@ class se302 extends React.Component{
                             </MDBCol>
                         </MDBRow>
                         <MDBRow className="d-flex justify-content-center mb-5">
-                            <MDBCol lg="10" md="8" className="mb-lg-0 ">
+                            <MDBCol className="d-flex justify-content-center">
                             <Grades/>
                             </MDBCol>
                             <Modal modal={this.state.modal} close={this.close} 

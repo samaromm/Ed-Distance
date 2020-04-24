@@ -11,7 +11,9 @@
     "dotenv": "^8.2.0",
     "firebase": "^7.14.0",
     "jquery": "^3.5.0",
+    "match-sorter": "^4.1.0",
     "mdbreact": "^4.25.5",
+    "namor": "^2.0.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-bootstrap-table-next": "^4.0.1",
@@ -19,7 +21,9 @@
     "react-dom": "^16.13.1",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-table": "^7.0.4",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
