@@ -17,6 +17,7 @@ import Online from './Components/classes'
 import ClassVideo from './Components/videoClass'
 import TeacherOnline from './Components/teachers/class'
 import Se302T from './Components/se302t'
+import Footer from './Components/footer'
 
 function App () {
 

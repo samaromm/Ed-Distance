@@ -33,8 +33,8 @@ export default class ModalBody extends Component{
                         </div>
                         <div class={`custom-control custom-checkbox ${this.props.display}`}>
                             <input type="checkbox" class="custom-control-input" id="Private"/>
-                            <label class="custom-control-label" for="Private">Private</label>
-                            <p style={{color:"red"}}>Notice that by choosing this option people can't see your room or join it unless you invite them directly</p>
+                            <label class={`custom-control-label ${this.props.display}`} for="Private">Private</label>
+                            <p style={{color:"red"}} className={`${this.props.display}`}>Notice that by choosing this option people can't see your room or join it unless you invite them directly</p>
                         </div>
                         <div className="text-center">
                             <MDBBtn color="pink" className="text-white submitBtn">Create</MDBBtn>
