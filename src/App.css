@@ -106,3 +106,6 @@
   justify-content: space-around;
 }
 
+.blackBorder{
+  border: solid black 2px;
+}

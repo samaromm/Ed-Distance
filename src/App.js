@@ -15,6 +15,7 @@ import Favorites from './Components/favorites'
 import Room from './Components/room'
 import Online from './Components/classes'
 import ClassVideo from './Components/videoClass'
+import TeacherOnline from './Components/teachers/class'
 
 function App () {
 
@@ -39,6 +40,7 @@ function App () {
             <Route path='/teacher/discussion' exact component={Room}/>
             <Route path='/student/class' exact component={ClassVideo}/>
             <Route path='/teacher/class' exact component={ClassVideo}/>
+            <Route path='/teacher/onlineclasses' exact component={TeacherOnline}/>
           </div>
         </Router>
       </AuthProvider>

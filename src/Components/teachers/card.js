@@ -124,7 +124,7 @@ class Card extends React.Component{
                 </MDBCol>
             </MDBRow>
             <Modal modal={this.state.modal} close={this.close}/>
-            <Modal2 modal={this.state.modal2} close={this.close2} bigTitle="Add an announcement"
+            <Modal2 modal={this.state.modal2} close={this.close2} bigTitle="Add new"
             title="Course Code" text="Details" display="displayNone"/>
             </MDBContainer>
         )

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBContainer} from 'mdbreact'
 import firebase from '../base'
+import Grades from './gradestable'
 
 class se302 extends React.Component{
 
@@ -124,12 +125,18 @@ class se302 extends React.Component{
             <div>
                 <Header home={home}/>
                     <MDBContainer fluid> 
-                        <MDBRow className="pt-5 pinkText mb-3">
+                        <MDBRow className="pt-5 pinkText">
                             <MDBCol className="d-flex text-center justify-content-center">
                                 <h5 className="font-weight-bold">{this.state.se302["name"]}</h5>
                                 <MDBIcon icon="dove" />
                                 <h5>{this.state.se302["lecturer"]}</h5>
                             </MDBCol>
+                        </MDBRow>
+                        <MDBRow className="mb-3">
+                            <MDBCol className="d-flex text-center justify-content-center">
+                            <h6 className="font-weight-bold" style={{color:"gray"}}>[Principles of software project management, planning, and organizing]</h6>
+                            </MDBCol>
+                            
                         </MDBRow>      
                         <MDBRow className="d-flex justify-content-center mb-5">
                             <MDBCol lg="10" md="8" className="mb-lg-0 ">
@@ -157,6 +164,26 @@ class se302 extends React.Component{
                                 </MDBCard>
                             </MDBCol>
                         </MDBRow>
+                        <MDBRow className="d-flex justify-content-center mb-5">
+                            <MDBCol lg="10" md="8" className="mb-lg-0 ">
+                                <MDBCard testimonial >
+                                    <h4 className="font-weight-bold pt-3 pl-3" style={{color:"gray"}}>
+                                        <MDBIcon icon="file" className="mr-3"/>
+                                        Assignments
+                                    </h4><hr/>
+                                <MDBCardBody style={scrollContainerStyle} className="pinkText scrollbar d-flex flex-wrap example-parent">
+                                    <h5 className="font-weight-bold">
+                                    <MDBIcon far icon="grin-beam" />You don't have any assignments at the main time! YAY </h5>
+                                </MDBCardBody>
+                                </MDBCard>
+                            </MDBCol>
+                        </MDBRow>
+                        <MDBRow className="d-flex justify-content-center mb-5">
+                            <MDBCol lg="10" md="8" className="mb-lg-0 ">
+                            <Grades/>
+                            </MDBCol>
+                        </MDBRow>
+                        
                     </MDBContainer>
             </div>
         )

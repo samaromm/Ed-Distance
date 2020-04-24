@@ -36,7 +36,7 @@ const TeachLogin=({ history })=>{
                             <p className="h5 text-center mb-4" style={{color:"#E91E63"}}>Teacher login</p>
                             <form onSubmit={handleLogin}>
                                 <div className="pink-text">
-                                    <MDBInput label="Student Email" icon="envelope" group type="email" validate error="wrong"
+                                    <MDBInput label="Email" icon="envelope" group type="email" validate error="wrong"
                                     success="right" name="email"/>
                                     <MDBInput label="Password" icon="lock" group type="password" name="password"/>
                                 </div>

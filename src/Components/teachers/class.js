@@ -1,21 +1,18 @@
 import React from 'react'
-import Header from './Header'
-import Content from './classcom'
+import Header from '../Header'
 import Card from './classcom2'
 import Two from './classcom'
-import { MDBRow, MDBCol, MDBCard,MDBCardBody, MDBIcon   } from 'mdbreact'
-import image from '../images/s.svg'
+import { MDBRow, MDBCol, MDBCard,MDBCardBody, MDBIcon, MDBBtn   } from 'mdbreact'
+import image from '../../images/s.svg'
 
 export default class classes extends React.Component{
     render(){
-        let home=""
-        this.props.location.pathname=="/teacher/onlineclasses"? home="teacher":home="student"
         return(
             <div>
-            <Header home={home} />
+            <Header home='teacher' />
             
             <div class="alert alert-danger" role="alert">
-                SE302 online class has started! <a href="/student/class">Join it now</a>
+                Your scheduled SE302 class will start in two minutes! <a href="/teacher/class">Start it now</a>
             </div>
             <MDBRow className="justify-content-center d-flex ">
             
@@ -27,18 +24,18 @@ export default class classes extends React.Component{
                           <img src={image} style={{width:"60%"}} className="ml-5"/>
                         </a>  
                     </MDBRow>
-                    <MDBCard testimonial className=" my-5">
-                        <h3 className="font-weight-bold text-center py-3 pinkText">Upcoming classes</h3><hr/>
-                    <MDBCardBody >
+                    <MDBCard testimonial className=" py-4">
+                        <h4 className="font-weight-bold text-center pinkText">Your upcoming classes
+                        <MDBBtn color="pink" className="px-1 py-0" onClick={this.open}> <MDBIcon icon="plus" /></MDBBtn>
+                        </h4>
+                        <hr/>
+                    <MDBCardBody className="scrollbar text-center">
                     <p style={{color:"gray"}}>          
                     <MDBIcon icon="star" className="pr-2" />
                     
-                    SE302 - Tuesday 2:00PM
-                </p> 
-                <p style={{color:"gray"}}>          
+                    SE302 - Today 2:00PM<br/>
                     <MDBIcon icon="star" className="pr-2" />
-                    
-                    Math302 - Wednesday 2:00PM
+                    SE201 - Monday 2:00PM
                 </p> 
                     </MDBCardBody>
                     </MDBCard>
